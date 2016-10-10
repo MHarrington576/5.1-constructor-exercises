@@ -1,10 +1,6 @@
-
-// Bootstrap Variables
 $icon-font-path: '../../node_modules/bootstrap-sass/assets/fonts/bootstrap/';
-
-// Import Bootstrap
 @import '../../node_modules/bootstrap-sass/assets/stylesheets/bootstrap';
-
+@import "https://fonts.googleapis.com/css?family=Raleway";
 
 *,
 *::before,
@@ -14,4 +10,8 @@ $icon-font-path: '../../node_modules/bootstrap-sass/assets/fonts/bootstrap/';
 
 img {
   max-width: 100%;
+}
+
+h1 {
+  font-family: 'Raleway', 'Helvetica', sans-serif;
 }

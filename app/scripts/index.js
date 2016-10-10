@@ -38,7 +38,36 @@ function expect(target) {
 // Only add code to *THIS* section!
 
 
+function Dog(config){
+  config = config || {}; // set config to empty object if config is not defined; config represents the object you pass in when you create a dog instance
+  this.status = 'normal'; // set all instances of dog to have status: normal
+  this.color = config.color || 'chartreuse'; // set all instances of dog to have color: red
+  if(config.hungry == undefined){ // check to see if hungry property was passed in when the dog is created
+    this.hungry = true; // if config.hungry is not defined, create the hungry property on the dog and set it to true
+  } else {
+    this.hungry = config.hungry; // if config.hungry is defined, use the value passed in to set the dog's hungry status
+  }
+}
 
+
+function Human(config){
+  config = config || {};
+  if(config.cool == undefined){
+    this.cool = false;
+  } else {
+    this.cool = config.cool;
+  }
+}
+
+
+Human.prototype.pet = function(dog){
+  dog.status = 'happy';
+}
+
+
+Human.prototype.feed = function(dog){
+  dog.hungry = false;
+}
 
 
 //        __
